@@ -15,6 +15,7 @@ import seaborn as sns
 # Preprocesado y modelado
 # -----------------------------------------------------------------------
 from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import RobustScaler
 
 
 # Sacar número de clusters y métricas
@@ -245,7 +246,7 @@ class Preprocesado:
         col_numericas = self.dataframe.select_dtypes(include=np.number).columns
 
         # Inicializamos el escalador para estandarizar los datos
-        scaler = StandardScaler()
+        scaler = RobustScaler()
 
         # Ajustamos los datos y los transformamos
         X_scaled = scaler.fit_transform(self.dataframe[col_numericas])
