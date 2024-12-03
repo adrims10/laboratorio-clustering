@@ -448,7 +448,7 @@ class Clustering:
         dataframe_original["clusters_spectral"] = labels.astype(str)
         return dataframe_original
     
-    def modelo_dbscan(self, dataframe_original, eps_values=[0.5, 1.0, 1.5], min_samples_values=[3, 2, 1]):
+    def modelo_dbscan(self, dataframe_original, eps_values=[0.5, 1.0, 1.5], min_samples_values=[5,3, 2, 1]):
         """
         Aplica DBSCAN al DataFrame y añade las etiquetas de clusters al DataFrame original.
 
